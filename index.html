@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Bala Murugan Mahendran — Principal Cloud Architect</title>
+  <title>Bala Murugan Mahendran — Principal Cloud & Cybersecurity Architect</title>
+  <meta name="description" content="Principal Cloud & Cybersecurity Architect with 20 years of experience. AWS, Azure, GCP, DSPM, PCI-DSS, SOC2, NIS2. London, UK."/>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
@@ -99,7 +100,7 @@
       margin: 0 auto;
       padding: 2.5rem 2rem;
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(4, 1fr);
       gap: 1px;
       border-bottom: 1px solid var(--border);
       background: var(--border);
@@ -159,7 +160,10 @@
       color: var(--muted);
       line-height: 1.85;
       max-width: 680px;
+      margin-bottom: 1rem;
     }
+
+    .about-text:last-child { margin-bottom: 0; }
 
     .about-text strong {
       color: var(--text);
@@ -207,10 +211,12 @@
       height: 2px;
     }
 
-    .highlight-card.teal::before { background: var(--accent); }
-    .highlight-card.blue::before { background: var(--accent2); }
+    .highlight-card.teal::before  { background: var(--accent); }
+    .highlight-card.blue::before  { background: var(--accent2); }
     .highlight-card.amber::before { background: var(--accent3); }
-    .highlight-card.pink::before { background: #e879a0; }
+    .highlight-card.pink::before  { background: #e879a0; }
+    .highlight-card.green::before { background: #4ade80; }
+    .highlight-card.purple::before{ background: #c084fc; }
 
     .highlight-card .icon {
       font-size: 1.5rem;
@@ -307,6 +313,26 @@
       line-height: 1.7;
     }
 
+    .job-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      margin-top: 0.75rem;
+    }
+
+    .job-tag {
+      font-family: var(--mono);
+      font-size: 10px;
+      padding: 2px 8px;
+      border-radius: 4px;
+      background: var(--surface2);
+      border: 1px solid var(--border);
+      color: var(--muted);
+    }
+
+    .job-tag.accent { color: var(--accent); border-color: rgba(62,207,178,0.25); background: rgba(62,207,178,0.07); }
+    .job-tag.blue   { color: var(--accent2); border-color: rgba(108,142,245,0.25); background: rgba(108,142,245,0.07); }
+
     /* ── SKILLS ── */
     .skills {
       padding: 3.5rem 0;
@@ -349,6 +375,12 @@
       color: var(--text);
       font-family: var(--mono);
     }
+
+    .pill.teal   { color: var(--accent);  border-color: rgba(62,207,178,0.25);  background: rgba(62,207,178,0.07); }
+    .pill.blue   { color: var(--accent2); border-color: rgba(108,142,245,0.25); background: rgba(108,142,245,0.07); }
+    .pill.amber  { color: var(--accent3); border-color: rgba(245,166,35,0.25);  background: rgba(245,166,35,0.07); }
+    .pill.purple { color: #c084fc;        border-color: rgba(192,132,252,0.25); background: rgba(192,132,252,0.07); }
+    .pill.green  { color: #4ade80;        border-color: rgba(74,222,128,0.25);  background: rgba(74,222,128,0.07); }
 
     /* ── CERTIFICATIONS ── */
     .certs {
@@ -403,6 +435,12 @@
     .cert-badge.sun::after       { background: linear-gradient(90deg, #f80000, #ffa500); }
     .cert-badge.cisco::after     { background: linear-gradient(90deg, #1ba0d7, #004f97); }
     .cert-badge.aerospike::after { background: linear-gradient(90deg, #c10e3c, #881030); }
+    .cert-badge.progress::after  { background: linear-gradient(90deg, #f5a623, #3ecfb2); }
+
+    .cert-badge.progress {
+      border-style: dashed;
+      border-color: rgba(245,166,35,0.3);
+    }
 
     .cert-logo {
       width: 48px;
@@ -425,6 +463,7 @@
     .cert-logo.sun-logo       { background: rgba(248,100,0,0.13); }
     .cert-logo.cisco-logo     { background: rgba(27,160,215,0.13); }
     .cert-logo.aerospike-logo { background: rgba(193,14,60,0.13); }
+    .cert-logo.progress-logo  { background: rgba(62,207,178,0.13); }
 
     .cert-name {
       font-size: 0.92rem;
@@ -432,6 +471,8 @@
       color: var(--text);
       line-height: 1.35;
     }
+
+    .cert-badge.progress .cert-name { color: var(--accent3); }
 
     .cert-issuer {
       font-size: 0.8rem;
@@ -470,6 +511,19 @@
       font-size: 10px;
       color: var(--accent);
       letter-spacing: 0.04em;
+    }
+
+    .in-progress-tag {
+      display: inline-block;
+      font-family: var(--mono);
+      font-size: 10px;
+      padding: 2px 7px;
+      border-radius: 4px;
+      background: rgba(245,166,35,0.12);
+      color: var(--accent3);
+      border: 1px solid rgba(245,166,35,0.3);
+      margin-top: 0.25rem;
+      width: fit-content;
     }
 
     /* ── EDUCATION ── */
@@ -557,14 +611,13 @@
     .footer-copy {
       font-family: var(--mono);
       font-size: 11px;
-      color: var(--border);
       color: rgba(255,255,255,0.15);
     }
 
     @media (max-width: 600px) {
       .hero { grid-template-columns: 1fr; }
       .hero-avatar { display: none; }
-      .stats { grid-template-columns: 1fr; gap: 0; }
+      .stats { grid-template-columns: repeat(2,1fr); gap: 0; }
       .stat { border-bottom: 1px solid var(--border); }
       .highlight-grid { grid-template-columns: 1fr; }
     }
@@ -575,28 +628,32 @@
   <!-- HERO -->
   <header class="hero">
     <div>
-      <p class="hero-eyebrow">Principal Cloud Architect · London, UK</p>
+      <p class="hero-eyebrow">Principal Cloud &amp; Cybersecurity Architect · London, UK</p>
       <h1>Bala Murugan<br><em>Mahendran</em></h1>
-      <p class="hero-sub">19+ years building secure, scalable, and cost-optimised multi-cloud infrastructure for global enterprises. Currently at Lebara — serving 5M+ subscribers across AWS, Azure & GCP.</p>
+      <p class="hero-sub">20 years building secure, scalable, and cost-optimised multi-cloud platforms for global enterprises. Currently at Lebara — serving <strong style="color:var(--text)">6M+ customers</strong> across AWS, Azure, GCP &amp; Datacenter with <strong style="color:var(--text)">99.99% uptime</strong>.</p>
     </div>
     <div class="hero-avatar">
-      <img src="https://media.licdn.com/dms/image/v2/C5603AQE5Q04P0GmAig/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1517372703727?e=1778112000&v=beta&t=LCaNcobspy9F-0wW8JvPGl8XDNf598d0OsG8RkjB2RI" alt="Bala Murugan Mahendran" />
+      <img src="https://raw.githubusercontent.com/balamurugan-mahendran/balamurugan-mahendran.github.io/main/bala.jpg" alt="Bala Murugan Mahendran" />
     </div>
   </header>
 
   <!-- STATS -->
   <div class="stats" role="region" aria-label="Key metrics">
     <div class="stat">
-      <span class="stat-num">19<span>+</span></span>
+      <span class="stat-num">20</span>
       <p class="stat-label">Years experience</p>
     </div>
     <div class="stat">
-      <span class="stat-num">30<span>%</span></span>
-      <p class="stat-label">Infra cost reduction YoY</p>
+      <span class="stat-num">40<span>%+</span></span>
+      <p class="stat-label">Cost reduction YoY</p>
     </div>
     <div class="stat">
-      <span class="stat-num">5<span>M+</span></span>
-      <p class="stat-label">Subscribers served</p>
+      <span class="stat-num">6<span>M+</span></span>
+      <p class="stat-label">Customers served</p>
+    </div>
+    <div class="stat">
+      <span class="stat-num">99.<span>99%</span></span>
+      <p class="stat-label">Uptime SLA</p>
     </div>
   </div>
 
@@ -606,7 +663,16 @@
     <section class="about">
       <p class="section-label">About</p>
       <p class="about-text">
-        I specialise in <strong>multi-cloud architecture</strong> — designing enterprise-grade platforms that are resilient, secure, and built to scale. Over nearly two decades I've helped organisations across telecom, media, SaaS and finance <strong>modernise infrastructure</strong>, drive FinOps savings, and accelerate delivery through DevOps transformation. I thrive at the intersection of <strong>technology strategy and hands-on execution</strong>, translating business needs into cloud platforms that deliver measurable ROI.
+        I specialise in two things most cloud architects don't combine: <strong>delivering at scale</strong>
+        (6M+ customers, 99.99% uptime) while making infrastructure <strong>significantly cheaper</strong>
+        (40%+ YoY). At Lebara I own the full stack — architecture, security, compliance, reliability,
+        and cost — across Multi-Cloud and Datacenter.
+      </p>
+      <p class="about-text">
+        Over 20 years I've helped organisations across <strong>telecom, payments, media, SaaS, and enterprise IT</strong>
+        modernise infrastructure, build DSPM programmes, and deliver PCI-DSS / SOC2 / NIS2 / GDPR compliance
+        with zero audit findings. I thrive at the intersection of <strong>cloud platform engineering and
+        cybersecurity</strong> — from Terraform and Kubernetes to Wiz, CyberArk, KMS, and HSM.
       </p>
     </section>
 
@@ -617,22 +683,32 @@
         <div class="highlight-card teal">
           <span class="icon">☁️</span>
           <h3>Multi-cloud leadership</h3>
-          <p>Designed AWS, Azure & GCP strategies supporting 5M+ users globally with 99.99% uptime across mission-critical telecom platforms.</p>
+          <p>Architect and operate multi-region, active-active cloud infrastructure (AWS, Azure, GCP &amp; Datacenter) for 6M+ customers with 99.99% uptime — across payments and telecom at global scale.</p>
         </div>
         <div class="highlight-card blue">
           <span class="icon">📉</span>
           <h3>Cost optimisation at scale</h3>
-          <p>Delivered 30% YoY infrastructure savings through FinOps practices, right-sizing, and automation-led cloud spend governance.</p>
+          <p>Delivered 40%+ YoY infrastructure cost reduction through FinOps, right-sizing, reserved instance strategy, and automated spend governance across AWS, Azure, and GCP.</p>
         </div>
         <div class="highlight-card amber">
           <span class="icon">⚙️</span>
-          <h3>DevOps transformation</h3>
-          <p>Implemented CI/CD pipelines and IaC with Terraform, Ansible & Helm — cutting deployment times by 40% and standardising environments.</p>
+          <h3>Platform engineering &amp; DevOps</h3>
+          <p>Own IaC (Terraform, CDK, Ansible, Helm) across all environments — accelerating deployments by 40%, eliminating config drift, and enabling self-service provisioning for engineering teams.</p>
         </div>
         <div class="highlight-card pink">
           <span class="icon">🔒</span>
-          <h3>Security & governance</h3>
-          <p>Built compliant landing zones and governance frameworks aligned to GDPR, PCI DSS & ISO 27001 for telecom-grade infrastructure.</p>
+          <h3>Security &amp; DSPM</h3>
+          <p>Lead DSPM programme end-to-end: data discovery, classification, sensitive-data mapping, compliance visibility, and exposure monitoring. Full toolchain: Wiz · CyberArk · Rapid7 · Cloudflare · Umbrella DNS. PCI-DSS, SOC2, NIS2, GDPR, ISO 27001 — zero audit findings.</p>
+        </div>
+        <div class="highlight-card green">
+          <span class="icon">🔑</span>
+          <h3>Secrets &amp; cryptographic management</h3>
+          <p>Own KMS, HSM, and CyberArk PAM with automated rotation policies — delivering secrets governance and least-privilege IAM across all cloud environments at payments grade.</p>
+        </div>
+        <div class="highlight-card purple">
+          <span class="icon">📡</span>
+          <h3>Platform reliability</h3>
+          <p>Define and monitor SLOs, own RTO/RPO targets, lead incident response, and run chaos engineering and gameday exercises. Observability across Prometheus, Grafana, PagerDuty, and CloudWatch.</p>
         </div>
       </div>
     </section>
@@ -644,38 +720,37 @@
 
         <div class="job">
           <div class="job-header">
-            <span class="job-title">Principal Cloud Architect</span>
+            <span class="job-title">Principal Cloud &amp; Cybersecurity Architect</span>
             <span class="job-period">Oct 2024 – Present</span>
           </div>
           <p class="job-company">Lebara · London, UK</p>
-          <p class="job-desc">Architecting enterprise-grade multi-cloud infrastructure for a global telecom provider. Spearheading cloud transformation — migrating legacy workloads to Kubernetes, microservices and serverless — while leading FinOps, security compliance (GDPR, PCI DSS), and next-gen 5G/edge computing initiatives.</p>
+          <p class="job-desc">Architecting and operating multi-region, highly available cloud infrastructure for payments and telecom systems (AWS, Azure, GCP) serving 6M+ customers. Own IaC (Terraform, CDK), CI/CD pipelines (Jenkins, GitHub Actions), DSPM programme (Wiz), secrets management (KMS, HSM, CyberArk), real-time observability (Prometheus, Grafana, PagerDuty), and full compliance delivery (PCI-DSS, SOC2, NIS2, GDPR). Operate Kafka and Kinesis for payment event streaming; PostgreSQL at scale. Lead incident response, chaos engineering, and RTO/RPO validation.</p>
+          <div class="job-tags">
+            <span class="job-tag accent">AWS · Azure · GCP</span>
+            <span class="job-tag accent">Kubernetes · EKS</span>
+            <span class="job-tag accent">Terraform · CDK</span>
+            <span class="job-tag blue">Wiz · CyberArk · Rapid7</span>
+            <span class="job-tag blue">PCI-DSS · SOC2 · NIS2</span>
+            <span class="job-tag blue">DSPM · CSPM</span>
+            <span class="job-tag">Kafka · Kinesis</span>
+            <span class="job-tag">Prometheus · Grafana</span>
+          </div>
         </div>
 
         <div class="job">
           <div class="job-header">
-            <span class="job-title">Enterprise Cloud Architect</span>
-            <span class="job-period">Jul 2020 – Oct 2024</span>
+            <span class="job-title">Principal Cloud Architect</span>
+            <span class="job-period">Apr 2016 – Sep 2024</span>
           </div>
-          <p class="job-company">Lebara · Tamil Nadu, India</p>
-          <p class="job-desc">Built and scaled AWS-based infrastructure with Terraform, Ansible & Jenkins. Drove cloud cost optimisation, designed governance frameworks, and guided DevOps adoption across engineering teams.</p>
-        </div>
-
-        <div class="job">
-          <div class="job-header">
-            <span class="job-title">Team Lead – Cloud Service Operations</span>
-            <span class="job-period">Jan 2018 – Jul 2020</span>
+          <p class="job-company">Lebara Media · Chennai, India</p>
+          <p class="job-desc">Built and scaled AWS-based infrastructure (Terraform, Ansible, Jenkins) across multiple regions. Drove consistent YoY cost savings through right-sizing, automation, and vendor negotiation. Designed PCI-DSS and GDPR-compliant governance frameworks for telecom-grade infrastructure. Led DevOps adoption, CI/CD pipeline delivery, and multi-region DR architecture for 24/7 mission-critical platforms. Implemented data classification and sensitive-data controls — establishing early DSPM practices. Managed multi-region AWS networking, VPC design, Route53, ELB, and CloudTrail audit logging.</p>
+          <div class="job-tags">
+            <span class="job-tag accent">AWS</span>
+            <span class="job-tag">Terraform · Ansible</span>
+            <span class="job-tag">CI/CD · DevOps</span>
+            <span class="job-tag blue">PCI-DSS · GDPR</span>
+            <span class="job-tag">Multi-region HA · DR</span>
           </div>
-          <p class="job-company">Lebara · Chennai, India</p>
-          <p class="job-desc">End-to-end cloud service operations across AWS, GCP & Azure. Led platform migrations, DR planning, capacity planning, and large-scale DevOps automation.</p>
-        </div>
-
-        <div class="job">
-          <div class="job-header">
-            <span class="job-title">Service Operations Engineer – Cloud</span>
-            <span class="job-period">Apr 2016 – Jan 2018</span>
-          </div>
-          <p class="job-company">Lebara · Chennai, India</p>
-          <p class="job-desc">Designed and automated cloud infrastructure; drove DevOps implementation across AWS, Azure & GCP; engaged with C-level stakeholders to translate business needs into technical roadmaps.</p>
         </div>
 
         <div class="job">
@@ -684,25 +759,26 @@
             <span class="job-period">Oct 2013 – Apr 2016</span>
           </div>
           <p class="job-company">YuMe · Chennai, India</p>
-          <p class="job-desc">Responsible for system architecture, design, and engineering across cloud and data centre environments. Monitored performance, managed scaling, and ensured system-wide security.</p>
+          <p class="job-desc">Managed hybrid infrastructure (AWS EC2, EMR, Hadoop, on-prem clusters) supporting high-scale audience segmentation and global ad-serving pipelines. Automated deployment workflows, improving release velocity and reducing operational overhead. Maintained 24/7 uptime for real-time bidding (RTB) and audience segmentation systems.</p>
+          <div class="job-tags">
+            <span class="job-tag accent">AWS EC2 · EMR</span>
+            <span class="job-tag">Hadoop</span>
+            <span class="job-tag">Ad-tech · RTB</span>
+          </div>
         </div>
 
         <div class="job">
           <div class="job-header">
             <span class="job-title">IT Analyst</span>
-            <span class="job-period">Apr 2007 – Oct 2013</span>
+            <span class="job-period">Jan 2006 – Oct 2013</span>
           </div>
-          <p class="job-company">Adaptavant Technology Solutions · Chennai, India</p>
-          <p class="job-desc">AWS migrations, high-availability architecture, VMware virtualisation, and IT department leadership. Built AWS-based solutions and led roadmap planning for enterprise cloud adoption.</p>
-        </div>
-
-        <div class="job">
-          <div class="job-header">
-            <span class="job-title">System Administrator</span>
-            <span class="job-period">Jan 2006 – Mar 2007</span>
+          <p class="job-company">Adaptavant Technology &amp; Sun Beams · Chennai, India</p>
+          <p class="job-desc">Led AWS cloud migration projects (EC2, RDS, S3, Route53) reducing on-prem infrastructure costs and improving reliability. Designed and deployed cloud telephony systems (Asterisk, FreeSwitch). Administered Linux/Windows server estates, networks, firewalls, and DR systems across multiple enterprise clients. Reduced network latency by 30ms through routing optimisation; lowered bandwidth costs by 40%.</p>
+          <div class="job-tags">
+            <span class="job-tag accent">AWS migrations</span>
+            <span class="job-tag">Linux · Windows Server</span>
+            <span class="job-tag">Cloud telephony</span>
           </div>
-          <p class="job-company">Sun Beams Technology · Chennai, India</p>
-          <p class="job-desc">Lowered network latency by 30ms through backbone routing optimisation; reduced operating expenses by 40% in bandwidth costs; implemented GEO load balancing and high availability for high-traffic sites.</p>
         </div>
 
       </div>
@@ -715,9 +791,11 @@
       <div class="skill-group">
         <p class="skill-group-label">Cloud platforms</p>
         <div class="pills">
-          <span class="pill">AWS</span>
-          <span class="pill">Azure</span>
-          <span class="pill">GCP</span>
+          <span class="pill teal">AWS</span>
+          <span class="pill teal">Azure</span>
+          <span class="pill teal">GCP</span>
+          <span class="pill teal">Multi-cloud</span>
+          <span class="pill teal">Datacenter</span>
         </div>
       </div>
 
@@ -725,8 +803,10 @@
         <p class="skill-group-label">Infrastructure as code</p>
         <div class="pills">
           <span class="pill">Terraform</span>
+          <span class="pill">AWS CDK</span>
           <span class="pill">Ansible</span>
           <span class="pill">Helm</span>
+          <span class="pill">Pulumi</span>
           <span class="pill">CloudFormation</span>
         </div>
       </div>
@@ -734,10 +814,47 @@
       <div class="skill-group">
         <p class="skill-group-label">Containers &amp; orchestration</p>
         <div class="pills">
-          <span class="pill">Kubernetes</span>
+          <span class="pill">Kubernetes (EKS)</span>
           <span class="pill">Docker</span>
-          <span class="pill">EKS</span>
-          <span class="pill">AKS</span>
+          <span class="pill">Helm</span>
+          <span class="pill">Serverless</span>
+          <span class="pill">Microservices</span>
+        </div>
+      </div>
+
+      <div class="skill-group">
+        <p class="skill-group-label">Security toolchain</p>
+        <div class="pills">
+          <span class="pill blue">Wiz (CSPM/DSPM)</span>
+          <span class="pill blue">CyberArk</span>
+          <span class="pill blue">Rapid7</span>
+          <span class="pill blue">Cloudflare</span>
+          <span class="pill blue">Umbrella DNS</span>
+          <span class="pill blue">SecurityScorecard</span>
+        </div>
+      </div>
+
+      <div class="skill-group">
+        <p class="skill-group-label">Secrets &amp; key management</p>
+        <div class="pills">
+          <span class="pill purple">AWS KMS</span>
+          <span class="pill purple">HSM</span>
+          <span class="pill purple">CyberArk PAM</span>
+          <span class="pill purple">HashiCorp Vault</span>
+          <span class="pill purple">IAM · Zero Trust</span>
+        </div>
+      </div>
+
+      <div class="skill-group">
+        <p class="skill-group-label">Compliance &amp; DSPM</p>
+        <div class="pills">
+          <span class="pill green">PCI-DSS</span>
+          <span class="pill green">SOC2</span>
+          <span class="pill green">NIS2</span>
+          <span class="pill green">GDPR</span>
+          <span class="pill green">ISO 27001</span>
+          <span class="pill green">DSPM</span>
+          <span class="pill green">CSPM</span>
         </div>
       </div>
 
@@ -745,33 +862,69 @@
         <p class="skill-group-label">DevOps &amp; CI/CD</p>
         <div class="pills">
           <span class="pill">Jenkins</span>
+          <span class="pill">GitHub Actions</span>
+          <span class="pill">ArgoCD</span>
           <span class="pill">Git</span>
           <span class="pill">Bitbucket</span>
           <span class="pill">Jira</span>
-          <span class="pill">GitHub Actions</span>
+          <span class="pill">Blue-Green</span>
+          <span class="pill">Canary</span>
         </div>
       </div>
 
       <div class="skill-group">
         <p class="skill-group-label">Observability</p>
         <div class="pills">
-          <span class="pill">Nagios</span>
-          <span class="pill">New Relic</span>
-          <span class="pill">CloudWatch</span>
+          <span class="pill teal">Prometheus</span>
+          <span class="pill teal">Grafana</span>
+          <span class="pill teal">PagerDuty</span>
+          <span class="pill teal">CloudWatch</span>
+          <span class="pill teal">New Relic</span>
+          <span class="pill teal">Nagios</span>
         </div>
       </div>
 
       <div class="skill-group">
-        <p class="skill-group-label">Practices</p>
+        <p class="skill-group-label">Data &amp; streaming</p>
         <div class="pills">
+          <span class="pill amber">Kafka</span>
+          <span class="pill amber">Amazon Kinesis</span>
+          <span class="pill amber">PostgreSQL</span>
+          <span class="pill amber">Event-driven architecture</span>
+        </div>
+      </div>
+
+      <div class="skill-group">
+        <p class="skill-group-label">Platform reliability</p>
+        <div class="pills">
+          <span class="pill">SLO · SLA</span>
+          <span class="pill">RTO · RPO</span>
           <span class="pill">FinOps</span>
           <span class="pill">SRE</span>
-          <span class="pill">Cloud Security</span>
-          <span class="pill">GDPR</span>
-          <span class="pill">PCI DSS</span>
-          <span class="pill">ISO 27001</span>
-          <span class="pill">Microservices</span>
-          <span class="pill">Serverless</span>
+          <span class="pill">Chaos engineering</span>
+          <span class="pill">Incident response</span>
+        </div>
+      </div>
+
+      <div class="skill-group">
+        <p class="skill-group-label">Networking</p>
+        <div class="pills">
+          <span class="pill">VPC design</span>
+          <span class="pill">WAF</span>
+          <span class="pill">VPN</span>
+          <span class="pill">Route53</span>
+          <span class="pill">SD-WAN</span>
+          <span class="pill">Private networking</span>
+        </div>
+      </div>
+
+      <div class="skill-group">
+        <p class="skill-group-label">Scripting &amp; OS</p>
+        <div class="pills">
+          <span class="pill">Python</span>
+          <span class="pill">Bash</span>
+          <span class="pill">Linux (RHEL · Ubuntu)</span>
+          <span class="pill">Windows Server</span>
         </div>
       </div>
 
@@ -785,7 +938,7 @@
         <!-- AWS -->
         <div class="cert-badge aws">
           <div class="cert-logo aws-logo">
-            <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <svg viewBox="0 0 150 150" xmlns="http://www.w3.org/2000/svg">
               <path d="M28.5 48.6c0 1.2.1 2.2.4 2.9.3.7.6 1.5 1.1 2.3.2.3.3.6.3.8 0 .4-.2.7-.7 1l-2.2 1.5c-.3.2-.6.3-.9.3-.3 0-.7-.2-1-.5a10 10 0 0 1-1.2-1.6c-.3-.6-.7-1.2-1-2-2.5 2.9-5.6 4.4-9.3 4.4-2.7 0-4.8-.8-6.3-2.3-1.5-1.5-2.3-3.5-2.3-6 0-2.6.9-4.8 2.8-6.4 1.9-1.6 4.4-2.4 7.5-2.4 1 0 2.1.1 3.2.3 1.1.2 2.3.5 3.5.8v-2.2c0-2.3-.5-3.9-1.4-4.9-1-1-2.6-1.5-4.9-1.5-1.1 0-2.2.1-3.3.4-1.1.3-2.2.7-3.3 1.2-.5.2-.8.3-1 .4-.2 0-.3.1-.4.1-.4 0-.5-.3-.5-.8v-2c0-.4.1-.7.2-.9.1-.2.4-.4.8-.6a17 17 0 0 1 4-1.5 19 19 0 0 1 4.8-.6c3.7 0 6.4.8 8.2 2.5 1.7 1.7 2.6 4.2 2.6 7.5v9.9zm-12.9 4.8c1 0 2-.2 3.1-.6 1.1-.4 2-.9 2.8-1.8.5-.5.8-1.1 1-1.8.2-.7.3-1.5.3-2.4v-1.2c-.9-.2-1.9-.4-2.9-.5-1-.1-2-.2-3-.2-2.1 0-3.6.4-4.7 1.3-1 .9-1.6 2.1-1.6 3.7 0 1.5.4 2.6 1.2 3.4.8.7 1.9 1.1 3.8 1.1zm25.3 3.4c-.4 0-.7-.1-.9-.3-.2-.2-.4-.5-.5-1L33 27.7c-.1-.6-.2-1 .2-1.2.3-.2.7-.3 1-.3h3.5c.5 0 .8.1 1 .3.2.2.4.5.5 1l5 20 4.7-20c.1-.5.3-.8.5-1 .2-.2.6-.3 1-.3h2.9c.5 0 .8.1 1 .3.2.2.4.5.5 1l4.7 20.2 5.1-20.2c.1-.5.3-.8.5-1 .2-.2.6-.3 1-.3h3.3c.4 0 .7.1 1 .3.3.2.3.6.2 1.2l-7 27.8c-.1.5-.3.8-.5 1-.2.2-.6.3-1 .3h-3.1c-.5 0-.8-.1-1-.3-.2-.2-.4-.5-.5-1L53 34.8l-4.6 21.7c-.1.5-.3.8-.5 1-.2.2-.6.3-1 .3h-3.1c-.4 0-.7 0-.9-.2zm37.3.8c-1.9 0-3.7-.2-5.5-.7-1.8-.5-3.2-1-4.2-1.6-.6-.3-1-.7-1.1-1-.1-.3-.2-.6-.2-1v-2.1c0-.6.2-.8.6-.8.2 0 .4 0 .6.1l.7.4c1.5.8 3.1 1.5 4.8 1.9 1.7.4 3.4.6 5 .6 2.7 0 4.8-.5 6.2-1.4a4.5 4.5 0 0 0 2.2-3.9c0-1.1-.4-2.1-1.1-2.8-.7-.8-2.1-1.5-4-2.1L76 41.8c-2.9-.9-5-2.3-6.3-4-1.3-1.7-1.9-3.6-1.9-5.6 0-1.6.4-3 1.1-4.2.7-1.2 1.7-2.3 2.9-3.1 1.2-.9 2.6-1.5 4.2-2 1.6-.5 3.3-.7 5-.7.9 0 1.8.1 2.7.2.9.1 1.8.3 2.6.5.8.2 1.6.4 2.3.7.7.3 1.3.6 1.7.9.6.3 1 .7 1.3 1.1.3.4.4.9.4 1.5v1.9c0 .6-.2.8-.6.8-.2 0-.6-.1-1.1-.4-1.7-.8-3.5-1.1-5.5-1.1-2.4 0-4.3.4-5.6 1.2-1.3.8-2 2-2 3.7 0 1.1.4 2.1 1.2 2.9.8.8 2.3 1.5 4.4 2.2l6 1.9c2.8.9 4.9 2.2 6.1 3.9 1.2 1.7 1.8 3.5 1.8 5.5 0 1.6-.3 3.1-1 4.4-.7 1.3-1.6 2.4-2.9 3.3-1.2.9-2.7 1.6-4.4 2.1-1.8.5-3.7.8-5.7.8z" fill="#f90"/>
             </svg>
           </div>
@@ -800,7 +953,7 @@
         <!-- GCP -->
         <div class="cert-badge gcp">
           <div class="cert-logo gcp-logo">
-            <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <svg viewBox="0 0 150 150" xmlns="http://www.w3.org/2000/svg">
               <path d="M62.3 35.7H50l-12.3 21.3 6.2 10.7L50 57l12.3-10.6z" fill="#EA4335"/>
               <path d="M37.7 57L25.4 35.7H12.8L25.4 57l6.1 10.7H44z" fill="#FBBC05"/>
               <path d="M75 35.7H62.3L50 57l6.1 10.7h12.8L75 57z" fill="#4285F4"/>
@@ -820,7 +973,7 @@
         <!-- Cisco -->
         <div class="cert-badge cisco">
           <div class="cert-logo cisco-logo">
-            <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <svg viewBox="0 0 150 150" xmlns="http://www.w3.org/2000/svg">
               <rect x="44" y="10" width="12" height="18" rx="3" fill="#1ba0d7"/>
               <rect x="28" y="18" width="12" height="14" rx="3" fill="#1ba0d7"/>
               <rect x="60" y="18" width="12" height="14" rx="3" fill="#1ba0d7"/>
@@ -844,10 +997,9 @@
         <!-- Red Hat -->
         <div class="cert-badge redhat">
           <div class="cert-logo rh-logo">
-            <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <svg viewBox="0 0 150 150" xmlns="http://www.w3.org/2000/svg">
               <ellipse cx="50" cy="38" rx="30" ry="22" fill="#cc0000"/>
               <path d="M20 52c0 8 13 22 30 22 10 0 22-5 30-14 2-3 2-5 0-6-4-3-14-4-24-4-12 0-21 2-28 5-5 2-8-1-8-3z" fill="#cc0000"/>
-              <path d="M20 52c0 8 13 22 30 22 10 0 22-5 30-14" fill="none" stroke="#111" stroke-width="1" opacity="0.15"/>
               <text x="50" y="44" text-anchor="middle" font-family="Arial" font-weight="bold" font-size="14" fill="#fff">RH</text>
               <text x="50" y="57" text-anchor="middle" font-family="Arial" font-weight="bold" font-size="8" fill="#fff">RHCE</text>
             </svg>
@@ -857,12 +1009,13 @@
           <div class="cert-meta">
             <span class="cert-date">Issued Aug 2006</span>
           </div>
+          <span class="cert-id">ID: 230-206-898</span>
         </div>
 
         <!-- Sun Microsystems -->
         <div class="cert-badge sun">
           <div class="cert-logo sun-logo">
-            <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <svg viewBox="0 0 150 150" xmlns="http://www.w3.org/2000/svg">
               <circle cx="50" cy="50" r="18" fill="#f80"/>
               <line x1="50" y1="10" x2="50" y2="26" stroke="#f80" stroke-width="6" stroke-linecap="round"/>
               <line x1="50" y1="74" x2="50" y2="90" stroke="#f80" stroke-width="6" stroke-linecap="round"/>
@@ -885,7 +1038,7 @@
         <!-- Microsoft -->
         <div class="cert-badge microsoft">
           <div class="cert-logo ms-logo">
-            <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <svg viewBox="0 0 150 150" xmlns="http://www.w3.org/2000/svg">
               <rect x="8" y="8" width="40" height="40" fill="#F25022"/>
               <rect x="52" y="8" width="40" height="40" fill="#7FBA00"/>
               <rect x="8" y="52" width="40" height="40" fill="#00A4EF"/>
@@ -902,7 +1055,7 @@
         <!-- Aerospike -->
         <div class="cert-badge aerospike">
           <div class="cert-logo aerospike-logo">
-            <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <svg viewBox="0 0 150 150" xmlns="http://www.w3.org/2000/svg">
               <polygon points="50,8 90,30 90,70 50,92 10,70 10,30" fill="#c10e3c"/>
               <polygon points="50,20 78,36 78,64 50,80 22,64 22,36" fill="#9e0b31"/>
               <text x="50" y="57" text-anchor="middle" font-family="Arial" font-weight="bold" font-size="22" fill="#fff">A</text>
@@ -913,6 +1066,42 @@
           <div class="cert-meta">
             <span class="cert-date">Issued Sep 2015</span>
           </div>
+        </div>
+
+        <!-- AWS Professional — In Progress -->
+        <div class="cert-badge progress">
+          <div class="cert-logo progress-logo">
+            <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="50" cy="50" r="38" fill="none" stroke="rgba(62,207,178,0.2)" stroke-width="8"/>
+              <circle cx="50" cy="50" r="38" fill="none" stroke="#3ecfb2" stroke-width="8" stroke-dasharray="160 80" stroke-linecap="round" transform="rotate(-90 50 50)"/>
+              <text x="50" y="46" text-anchor="middle" font-family="Arial" font-weight="bold" font-size="11" fill="#3ecfb2">AWS</text>
+              <text x="50" y="59" text-anchor="middle" font-family="Arial" font-size="9" fill="#3ecfb2">PRO</text>
+            </svg>
+          </div>
+          <p class="cert-name">AWS Certified Solutions Architect – Professional</p>
+          <p class="cert-issuer">Amazon Web Services · SAP-C02</p>
+          <div class="cert-meta">
+            <span class="cert-date">Target 2025</span>
+          </div>
+          <span class="in-progress-tag">In progress</span>
+        </div>
+
+        <!-- CCSP — In Progress -->
+        <div class="cert-badge progress">
+          <div class="cert-logo progress-logo">
+            <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="50" cy="50" r="38" fill="none" stroke="rgba(62,207,178,0.2)" stroke-width="8"/>
+              <circle cx="50" cy="50" r="38" fill="none" stroke="#3ecfb2" stroke-width="8" stroke-dasharray="120 120" stroke-linecap="round" transform="rotate(-90 50 50)"/>
+              <text x="50" y="46" text-anchor="middle" font-family="Arial" font-weight="bold" font-size="12" fill="#3ecfb2">CCSP</text>
+              <text x="50" y="60" text-anchor="middle" font-family="Arial" font-size="9" fill="#3ecfb2">(ISC)²</text>
+            </svg>
+          </div>
+          <p class="cert-name">Certified Cloud Security Professional (CCSP)</p>
+          <p class="cert-issuer">(ISC)²</p>
+          <div class="cert-meta">
+            <span class="cert-date">Target 2025</span>
+          </div>
+          <span class="in-progress-tag">In progress</span>
         </div>
 
       </div>
@@ -927,7 +1116,7 @@
         <div>
           <p class="edu-title">Master of Computer Applications (MCA)</p>
           <p class="edu-school">Dr M G R Educational and Research Institute</p>
-          <p class="edu-period">2004 – 2006</p>
+          <p class="edu-period">2004 – 2006 · First Class with Distinction — 89.99%</p>
         </div>
       </div>
 
@@ -948,7 +1137,8 @@
   <footer class="footer">
     <div class="footer-links">
       <a href="https://www.linkedin.com/in/bala-murugan-mahendran/" target="_blank" rel="noopener">LinkedIn ↗</a>
-      <a href="mailto:">Email</a>
+      <a href="mailto:balamurugan.admin@gmail.com">Email</a>
+      <a href="tel:+447586646901">+44 7586 646901</a>
     </div>
     <p class="footer-copy">© 2026 Bala Murugan Mahendran</p>
   </footer>
